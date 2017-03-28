@@ -1,0 +1,123 @@
+<div class="scrollable">
+	<div class="scrollable-content">
+		<div class="list-group text-center">
+			<!-- TITLE -->
+			<div class="list-group-item list-group-item-home">
+					<h1> <font  size="30"  color="red" ><strong> <blink> RoboticsLab  </blink> </strong> </font> <small>2017</small>
+					</h1>
+			</div>
+			
+			
+			<!-- Cục cảm biến -->
+			<div class="list-group-item list-group-item-home">
+			<h1> DATA OF SENSOR </h1>
+				<div>
+					<i class="fa fa-gamepad feature-icon text-primary"></i>
+				</div>	
+					<div>
+							<h3 class="home-heading"><small>SONAR SENSOR</small></h3>
+							<div ng-repeat="sonar_value in sonar  track by $index">
+								SONAR {{$index}} : {{sonar[$index]}} cm .
+							</div>
+					</div>	
+					<div>
+							<h3 class="home-heading"> <small>TEMPERATURE</small></h3>
+								{{temp}}°C
+					</div>
+					<div>
+							<h3 class="home-heading"> <small>SENSER PIR</small></h3>
+							<button class ="text" size="200" color =#800000 >
+								{{pir}}
+					
+					
+					</div>
+					<div>
+							<h3 class="home-heading"><small> STATUS</small> </h3>
+							<button class ="text" size="200"  >
+							{{stt}}
+					</div>	
+					<div>
+								<h3 class="home-heading"> UPDATE </h3>
+								<button class="button" ng-click="update()">
+								UPDATE NOW 
+					</div>
+				
+			</div>	
+			
+			<!-- CONTROL -->
+			<div class="list-group-item list-group-item-home">
+				<div>
+				<i class="fa fa-tachometer feature-icon  text-primary"></i>
+				</div>
+				<h1> CONTROL </h1>
+					<div>
+						<h3 class="home-heading"></h3>
+					
+							<button  class="button size="80" style="height:80px;width:80px"   ng-click="up()">
+									UP
+					</div>
+					<div>
+						<h3 class="home-heading"></h3>
+					
+						<button class="button" size="80" style="height:80px;width:80px" ng-click="left()">
+							LEFT
+						<button class="button" size="80" style="height:80px;width:80px" ng-click="stop()">
+							STOP
+						<button  class="button" size="80" style="height:80px;width:80px"   ng-click="right()">
+							RIGHT
+					</div>
+					<div>
+			
+						<h3 class="home-heading"></h3>	
+						<button class="button" size="80" style="height:80px;width:80px" ng-click="down()">
+							DOWN
+					</div>	
+						
+				
+					<div>
+						<h3 class="home-heading"><small>EMERGENCY CONTROL </small></h3>
+						
+					
+							<button class="button" size="40" style="height:80px;width:80px" ng-click="start()">
+							<h1> <font  size="3"  color="blue" ><strong>  <blink> START  </blink> </strong> </font></font></h1>
+					
+							<button class="button" size="40" style="height:80px;width:80px"  ng-click="emergency()">
+							<h1> <font  size="3"  color="red" ><strong> <blink> FREEZE </blink></strong> </font></h1>
+						
+						
+					</div>
+						
+			</div>
+			
+			
+			
+			
+			<!-- Cục cập nhập giá trị cảm biến -->
+			<div class="list-group-item list-group-item-home">
+					<div>
+						<i class="fa fa-tachometer feature-icon  text-primary"></i>
+					</div>
+					<h1> OPTIONS </h1>
+				
+				
+					<div>
+						<h3 class="home-heading"> SEND SOS</h3>
+						<button class="button" ng-click="sos()">
+						SEND NOW
+					</div>
+				
+					<div>
+						<h3 class="home-heading"> RESET MODULE </h3>
+						<button class="button" ng-click="res()">
+							RESET NOW 
+					</div>
+					
+				
+					
+			</div>
+		
+		
+			
+		</div>
+	</div>
+</div>
